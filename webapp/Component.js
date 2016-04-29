@@ -11,6 +11,9 @@ sap.ui.define([
 			ODataModel,
 			JSONModel, 
 			mockserver) {
+			    
+    mockserver.init();
+			    
 	return UIComponent.extend("sap.ui.demo.cart.Component", {
 
 		metadata: {
@@ -88,7 +91,6 @@ sap.ui.define([
 		},
 
 		init: function () {
-		    mockserver.init();
 			// call overwritten init (calls createContent)
 			UIComponent.prototype.init.apply(this, arguments);
 
