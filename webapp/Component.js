@@ -3,13 +3,14 @@ sap.ui.define([
 	'sap/m/routing/Router',
 	'sap/ui/model/resource/ResourceModel',
 	'sap/ui/model/odata/ODataModel',
-	'sap/ui/model/json/JSONModel'
+	'sap/ui/model/json/JSONModel',
+	'sap/ui/demo/cart/localService/mockserver'
 ], function (UIComponent,
 			Router,
 			ResourceModel,
 			ODataModel,
-			JSONModel) {
-
+			JSONModel, 
+			mockserver) {
 	return UIComponent.extend("sap.ui.demo.cart.Component", {
 
 		metadata: {
@@ -87,6 +88,7 @@ sap.ui.define([
 		},
 
 		init: function () {
+		    mockserver.init();
 			// call overwritten init (calls createContent)
 			UIComponent.prototype.init.apply(this, arguments);
 

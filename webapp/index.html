@@ -15,16 +15,13 @@
 			"sap.ui.demo.cart" : "./"
 		}' >
 	</script>
-
+	
 	<script>
 		sap.ui.getCore().attachInit(function () {
 				sap.ui.require([
 					"sap/m/Shell",
-					"sap/ui/core/ComponentContainer",
-					"sap/ui/demo/cart/localService/mockserver"
-				], function (Shell, ComponentContainer, mockserver) {
-					mockserver.init();
-
+					"sap/ui/core/ComponentContainer"
+				], function (Shell, ComponentContainer) {
 					new Shell("Shell", {
 						title : "Shopping Cart",
 						showLogout : false,
