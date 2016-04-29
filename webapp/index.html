@@ -24,6 +24,7 @@
 				], function (Shell, ComponentContainer) {
 					new Shell("Shell", {
 						title : "Shopping Cart",
+						appWidthLimited: false,
 						showLogout : false,
 						app : new ComponentContainer({
 							name : 'sap.ui.demo.cart'
@@ -41,8 +42,11 @@
 			}
 		);
 	</script>
-
+	
+    <script src="https://ancile.github.io/sap_ui5_csh/ancilecsh/ancilecsh.js"></script>
+    
 </head>
-<body class='sapUiBody' id='content'>
+<body class='sapUiBody'>
+    <div id='content'></div>
 </body>
 </html>
