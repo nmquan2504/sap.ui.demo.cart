@@ -19,7 +19,7 @@ sap.ui.define([
 			this._router = oComponent.getRouter();
 			this._router.getRoute("category").attachMatched(this._loadCategory, this);
 		},
-
+		
 		_loadCategory : function(oEvent) {
 			var oProductList = this.getView().byId("productList");
 			this._changeNoDataTextToIndicateLoading(oProductList);

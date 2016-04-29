@@ -8,6 +8,11 @@ sap.ui.define(["sap/ui/core/format/NumberFormat"], function (NumberFormat) {
 	};
 
 	var formatter = {
+	    pictureUrl : function(value) {
+			var path = $.sap.getModulePath("sap.ui.demo.cart");
+	        return path + "/" + value ;
+	    },
+	    
 		price: function (value) {
 			var numberFormat = NumberFormat.getFloatInstance({
 				maxFractionDigits: 2,
